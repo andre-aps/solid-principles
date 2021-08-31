@@ -16,7 +16,7 @@ public class ReajusteService {
 	public void reajustaSalario(Funcionario funcionario, BigDecimal aumento) {
 		this.validacoes.forEach(v -> v.valida(funcionario, aumento));
 		
-		funcionario.atualizaSalario(funcionario.getSalario().add(aumento));
+		funcionario.atualizaSalario(funcionario.getDadosPessoais().getSalario().add(aumento));
 	}
 
 }
